@@ -119,7 +119,7 @@
                                         
                                     </li>
                                     <li>
-                                        <a href="{{route('user.login.page')}}">LOGIN </a>
+                                        <a href="{{route('login')}}">LOGIN </a>
                                         
                                     </li>
                                    
@@ -127,7 +127,7 @@
                             </nav><!-- end main-menu -->
                             
                             <div class="nav-right-button">
-                                <a href="{{route('user.signup.page')}}" class="btn theme-btn d-none d-lg-inline-block"><i class="la la-user-plus mr-1"></i> SINGUP</a>
+                                <a href="{{route('register')}}" class="btn theme-btn d-none d-lg-inline-block"><i class="la la-user-plus mr-1"></i> SINGUP</a>
                             </div><!-- end nav-right-button -->
                         </div><!-- end menu-wrapper -->
                     </div><!-- end col-lg-10 -->

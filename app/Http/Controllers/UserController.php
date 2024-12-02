@@ -18,4 +18,8 @@ class UserController extends Controller
      public function LoginPage(){
         return view('auth.login');
     }
+
+    public function UserDashboard(){
+        return view('user.user_dashboard');
+    }
 }
