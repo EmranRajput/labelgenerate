@@ -47,7 +47,7 @@
 		<!--end header -->
 		<!--start page wrapper -->
 		<div class="page-wrapper">
-             @yield('user')
+             @yield('admin')
 			
 		</div>
 		<!--end page wrapper -->
