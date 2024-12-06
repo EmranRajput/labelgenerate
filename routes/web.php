@@ -27,6 +27,10 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'roles:user'])->group(function(){
     Route::controller(UserController::class)->group(function(){
         Route::get('/user/dashboard', 'UserDashboard')->name('user.dashboard');
+        
+
+        Route::get('/create/label', 'CreateLabel')->name('create.label');
+
 
     });
 
