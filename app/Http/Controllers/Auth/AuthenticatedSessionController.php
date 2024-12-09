@@ -29,12 +29,13 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
         $url = '';
         if($request->user()->role === 'admin'){
-            $url = '/admin/dashboard';
+            $url = ('/admin/dashboard');
+            return redirect()->intended($url)->with('success', 'Admin login Seucessfully.');
         }elseif($request->user()->role === 'user'){
             $url = '/user/dashboard';
+            return redirect()->intended($url)->with('success', 'User login Seucessfully.');
         }
 
-        return redirect()->intended($url);
     }
 
     /**
@@ -48,6 +49,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/')->with('success', 'Logged out successfully.');
     }
 }

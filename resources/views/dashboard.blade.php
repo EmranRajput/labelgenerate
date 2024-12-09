@@ -16,3 +16,6 @@
         </div>
     </div>
 </x-app-layout>
+
+
+        @include('notification.notification_alert')

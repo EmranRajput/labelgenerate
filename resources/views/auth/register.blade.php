@@ -170,3 +170,4 @@
         </div>
     </form>
 </x-guest-layout>
+        @include('notification.notification_alert')

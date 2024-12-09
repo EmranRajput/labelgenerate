@@ -5,10 +5,10 @@
     <meta name="author" content="TechyDevs">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    	<link rel="icon" href="{{asset('backend/images/labelworldlogo.png')}}" type="image/png" />
+    	<link rel="icon" href="{{asset('frontend/images/favicon12.png')}}" type="image/png" />
 
 
-    <title>Label Shipping</title>
+    <title>LabelsWorld</title>
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -86,7 +86,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-2">
                         <div class="logo-box">
-                            <a href="#" class="logo"><img src="{{asset('frontend/images/labelworldlogo.png')}}" style="width: 150px;" alt="logo"></a>
+                            <a href="#" class="logo"><img src="{{asset('frontend/images/logo2.png')}}" style="width: 100px;" alt="logo"></a>
                             <div class="user-btn-action">
                                 
                                 <div class="off-canvas-menu-toggle main-menu-toggle icon-element icon-element-sm shadow-sm" data-toggle="tooltip" data-placement="top" title="Main menu">
@@ -668,7 +668,7 @@
 <!-- ======================================
         START SUBSCRIBER AREA
 ======================================-->
-<section class="subscriber-area pt-60px pb-60px bg-gray position-relative overflow-hidden">
+<section class="subscriber-area  position-relative overflow-hidden" style="background-color:#E5EEFD;">
     <span class="stroke-shape stroke-shape-1"></span>
     <span class="stroke-shape stroke-shape-2"></span>
     <span class="stroke-shape stroke-shape-3"></span>
@@ -677,14 +677,14 @@
     <span class="stroke-shape stroke-shape-6"></span>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-5">
+            <div class="col-lg-4">
                 <div class="section-heading py-4">
                     <h5 class="ribbon ribbon-lg mb-2">Subscribe</h5>
-                    <h2 class="section__title mb-1">Subscribe to Label Delivery</h2>
+                    <h2 class="section__title mb-1">  LABELS WORLD</h2>
                     <p class="section__desc">Stay in the know on new generate label</p>
                 </div><!-- end section-heading -->
             </div><!-- end col-lg-5 -->
-            <div class="col-lg-5 ml-auto">
+            <div class="col-lg-4 ml-auto">
                 <form method="post" class="subscriber-form">
                     <div class="input-group">
                         <input type="email" name="email" class="form-control form--control pl-3" placeholder="Enter email address">
@@ -693,10 +693,14 @@
                         </div>
                     </div>
                     <p class="fs-14 mt-1">
-                        <i class="la la-lock mr-1"></i>Your information is safe with us! unsubscribe anytime.
+                        <i class="la la-lock mr-1"></i>Your information is safe with us!
                     </p>
                 </form>
             </div><!-- end col-lg-6 -->
+            <div class="col-lg-4 ml-auto">
+                <img src="{{asset('frontend/images/usps_image.png')}}" alt="">
+            </div><!-- end col-lg-6 -->
+
         </div><!-- end row -->
     </div><!-- end container -->
 </section><!-- end subscriber-area -->
@@ -713,7 +717,7 @@
             <div class="col-lg-4 responsive-column-half">
                 <div class="footer-item">
                     <a href="#">
-                        <img src="{{asset('frontend/images/labelworldlogo.png')}}" alt="footer logo" style="width: 200px;" class="footer__logo">
+                        <img src="{{asset('frontend/images/logo2.png')}}" alt="footer logo" style="width: 200px;" class="footer__logo">
                     </a>
                     <ul class="generic-list-item pt-4">
                         <li><a href="#">Get your flat rate labels today for a hassle-free experience.</a></li>

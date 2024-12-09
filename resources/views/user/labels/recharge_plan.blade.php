@@ -1,9 +1,10 @@
 
 @extends('user.user_index')
-@section('title')
-Subscription Plans
-@endsection
+    @section('title')
+    Subscription Plans
+    @endsection
 @section('user')
+
 <style>
  .headingLabel{
         background-color: #ec5252;
@@ -172,4 +173,7 @@ Subscription Plans
 			</div>
 		</div>
 	</div>
+
+
+    
 @endsection
