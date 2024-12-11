@@ -3,6 +3,7 @@
     @section('title')
     Subscription Plans
     @endsection
+    
 @section('user')
 
 <style>

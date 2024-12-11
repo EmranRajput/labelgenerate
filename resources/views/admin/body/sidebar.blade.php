@@ -22,13 +22,21 @@
                 <div class="menu-title">Dashboard</div>
             </a>
         </li>
-        <li>
-            <a href="{{route('create.label')}}">
-                <div class="parent-icon"><i class='bx bx-pen'></i>
+         <li>
+            <a href="">
+                <div class="parent-icon"><i class='bx bx-user'></i>
                 </div>
-                <div class="menu-title">Create Label</div>
+                <div class="menu-title">Users</div>
             </a>
         </li>
+        <li>
+            <a href="{{route('recharge.plans')}}">
+                <div class="parent-icon"><i class='bx bx-pen'></i>
+                </div>
+                <div class="menu-title">Recharge Plans</div>
+            </a>
+        </li>
+
         <li>
             <a href="widgets.html">
                 <div class="parent-icon"><i class='bx bx-note'></i>

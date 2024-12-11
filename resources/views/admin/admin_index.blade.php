@@ -38,11 +38,11 @@
 	<!--wrapper-->
 	<div class="wrapper">
 		<!--sidebar wrapper -->
-        @include('user.body.sidebar')
+        @include('admin.body.sidebar')
 	
 		<!--end sidebar wrapper -->
 		<!--start header -->
-         @include('user.body.header')
+         @include('admin.body.header')
 		
 		<!--end header -->
 		<!--start page wrapper -->
@@ -56,7 +56,7 @@
 		<!--end overlay-->
 		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
 		<!--End Back To Top Button-->
-         @include('user.body.footer')
+         @include('admin.body.footer')
 
 
         @include('notification.notification_alert')

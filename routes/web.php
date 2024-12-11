@@ -6,6 +6,13 @@ use App\Http\Controllers\LabelController;
 use App\Http\Controllers\Backend\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\Role;
+use App\Http\Controllers\USPSController;
+use App\Http\Controllers\Backend\RechargePlansController;
+
+
+
+// Route::post('/usps/validate-address', [USPSController::class, 'validateAddress'])->name('usps.api');
+
 
 
 Route::get('/', function () {
@@ -48,6 +55,16 @@ Route::middleware(['auth', 'roles:user'])->group(function(){
 Route::middleware(['auth', 'roles:admin'])->group(function(){
     Route::controller(AdminController::class)->group(function(){
         Route::get('/admin/dashboard', 'AdminDashboard')->name('admin.dashboard');
+        Route::get('/recharge/plans', 'RechargePlans')->name('recharge.plans');
+
+    });
+    Route::controller(RechargePlansController::class)->group(function(){ 
+        Route::get('/recharge/plans', 'RechargePlans')->name('recharge.plans');
+        Route::get('/create-recharge/plans', 'CreateRechargePlans')->name('create.recharge.plans');
+        Route::post('/create-recharge/plans', 'SubmitRechargePlans')->name('submit.recharge.plans');
+        Route::get('/recharge/plans/{id}/edit', 'EditRechargePlans')->name('edit.recharge.plans');
+        Route::post('/recharge/plans/update', 'UpdateRechargePlans')->name('post.recharge.plans');
+        Route::get('/recharge/plans/{id}/delete', 'DeleteRechargePlans')->name('delete.recharge.plans');
 
     });
 
