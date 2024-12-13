@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LabelController;
 use App\Http\Controllers\Backend\AdminController;
@@ -19,6 +20,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/', [UserController::class, 'Dashboard'])->name('web.dashboard');
+
+//login with google
+Route::get('/auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
+Route::get('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
+///
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -130,7 +130,7 @@
 
 <x-guest-layout>
     <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+    <x-auth-session-status class="mb-4 " :status="session('status')" />
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
@@ -178,6 +178,16 @@
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
+
+        <div class="flex justify-center mt-4">
+            <a href="{{ route('google.login') }}"
+                class="flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition ease-in-out duration-150">
+                <img src="{{ asset('frontend/images/google.svg') }}" alt="Google Logo" class="w-5 h-5 mr-2">
+                <span class="text-gray-700 font-medium">Sign in with Google</span>
+            </a>
+        </div>
+
+
         <div class="col-12">
             <div class="text-center mt-5">
                 <h5 class="mb-0">Don't have an account yet? <a href="{{route('register')}}">Sign up here</a>
