@@ -63,7 +63,10 @@
                     
                         <div class="dropdown-divider mb-0"></div>
                     </li>
-                    <li><a class="dropdown-item d-flex align-items-center" href="{{route('logout')}}"><i class="bx bx-log-out-circle"></i><span>Logout</span></a>
+                    <form id="logout-user" action="{{ route('user.logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+                    <li><a class="dropdown-item d-flex align-items-center" href="#" onclick="event.preventDefault(); document.getElementById('logout-user').submit();"><i class="bx bx-log-out-circle"></i><span>Logout</span></a>
                     </li>
                 </ul>
             </div>

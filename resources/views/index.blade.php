@@ -61,6 +61,7 @@
     .list-group-item{
         background-color: #f7f7f7;
     }
+ 
 </style>
 <body>
 
@@ -268,7 +269,7 @@
                         </div><!-- end col-lg-4 -->
                     </div><!-- end row -->
                     <div class="btn-box">
-                        <a href="#" class="btn theme-btn">SINGUP <i class="la la-arrow-right icon ml-1"></i></a>
+                        <a href="{{route('register')}}" class="btn theme-btn">SINGUP <i class="la la-arrow-right icon ml-1"></i></a>
                     </div><!-- end btn-box -->
                 </div><!-- end about-content -->
             </div><!-- end col-lg-6 -->
@@ -668,7 +669,7 @@
 <!-- ======================================
         START SUBSCRIBER AREA
 ======================================-->
-<section class="subscriber-area  position-relative overflow-hidden" style="background-color:#E5EEFD;">
+<section class="subscriber-area  position-relative overflow-hidden mt-4" style="background-color:#E5EEFD;">
     <span class="stroke-shape stroke-shape-1"></span>
     <span class="stroke-shape stroke-shape-2"></span>
     <span class="stroke-shape stroke-shape-3"></span>
@@ -711,7 +712,7 @@
 <!-- ================================
          END FOOTER AREA
 ================================= -->
-<section class="footer-area pt-100px">
+<section class="footer-area pt-50px">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 responsive-column-half">

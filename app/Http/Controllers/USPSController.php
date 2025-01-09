@@ -7,41 +7,52 @@ use Illuminate\Http\Request;
 
 class USPSController extends Controller
 {
-    private $uspsService;
+    protected $uspsService;
 
     public function __construct(USPSService $uspsService)
     {
         $this->uspsService = $uspsService;
     }
 
-    public function validateAddress(Request $request)
+    // Generate Label
+    public function createLabel(Request $request)
     {
-      // return response()->json(['message' => 'Route is working'], 200);
-        $request->validate([
-            'address1' => 'nullable|string',
-            'address2' => 'required|string',
-            'city' => 'required|string',
-            'state' => 'required|string',
-            'zip5' => 'required|string',
-            'zip4' => 'nullable|string',
+        $validated = $request->validate([
+            'toAddress.firstName' => 'required|string',
+            'toAddress.lastName' => 'required|string',
+            'toAddress.streetAddress' => 'required|string',
+            'toAddress.city' => 'required|string',
+            'toAddress.state' => 'required|string',
+            'toAddress.ZIPCode' => 'required|string',
+            'fromAddress.firstName' => 'required|string',
+            'fromAddress.lastName' => 'required|string',
+            'fromAddress.streetAddress' => 'required|string',
+            'fromAddress.city' => 'required|string',
+            'fromAddress.state' => 'required|string',
+            'fromAddress.ZIPCode' => 'required|string',
+            'packageDescription.mailClass' => 'required|string',
+            'packageDescription.weight' => 'required|numeric',
+            'packageDescription.length' => 'required|numeric',
+            'packageDescription.width' => 'required|numeric',
+            'packageDescription.height' => 'required|numeric',
         ]);
-        //return response()->json($request->all());
 
         try {
-            $validatedAddress = $this->uspsService->validateAddress($request->all());
-            // \Log::info('USPS Response: ', $validatedAddress);
-           // return response()->json($validatedAddress);
-             return response()->json([
-                'status' => 'success',
-                'data' => $validatedAddress,
-            ]);
-
+            $response = $this->uspsService->createLabel($validated);
+            return response()->json($response);
         } catch (\Exception $e) {
-            //return response()->json(['error' => $e->getMessage()], 500);
-            return response()->json([
-                'status' => 'error',
-                'message' => $e->getMessage(),
-            ], 500);
+            return response()->json(['error' => $e->getMessage()], 400);
+        }
+    }
+
+    // Cancel Label
+    public function cancelLabel($trackingNumber)
+    {
+        try {
+            $response = $this->uspsService->cancelLabel($trackingNumber);
+            return response()->json($response);
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 400);
         }
     }
 }

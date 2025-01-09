@@ -51,19 +51,24 @@
             </div>
             <div class="user-box dropdown px-3">
                 <a class="d-flex align-items-center nav-link dropdown-toggle gap-3 dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="{{asset('backend/images/avatars/avatar-2.png')}}" class="user-img" alt="user avatar">
+                    <img src="{{ Avatar::create(auth()->user()->name)->toBase64() }}" class="user-img" alt="user avatar"/>
+
+                    <!-- <img src="{{asset('backend/images/avatars/avatar-2.png')}}" class="user-img" alt="user avatar"> -->
                     <div class="user-info ">
                         <p class="user-name mb-0">{{auth()->user()->name}}</p>
                         
                     </div>
                 </a>
+                <form id="logout-user" action="{{ route('user.logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i class="bx bx-user fs-5"></i><span>Profile</span></a>
                     </li>
                     
                         <div class="dropdown-divider mb-0"></div>
                     </li>
-                    <li><a class="dropdown-item d-flex align-items-center" href="{{route('logout')}}"><i class="bx bx-log-out-circle"></i><span>Logout</span></a>
+                    <li><a class="dropdown-item d-flex align-items-center" href="#" onclick="event.preventDefault(); document.getElementById('logout-user').submit();"><i class="bx bx-log-out-circle"></i><span>Logout</span></a>
                     </li>
                 </ul>
             </div>

@@ -27,8 +27,8 @@
         
         <div id="stepper1" class="bs-stepper">
         <div class="card">
-            <div class="card headingLabel">
-                <div class="card-body "> 
+            <div class="card headingLabel ">
+                <div class="card-body px-4 "> 
                     <div id="stepper3" class="bs-stepper gap-4 vertical">
                         <div class="bs-stepper-header" role="tablist">
                             <div class="step" data-target="#test-vl-1">
@@ -44,14 +44,14 @@
                         </div>
                 </div>
             </div>
-            <div class="card-body">
+            <div class="card-body   px-4">
             
                 <div class="bs-stepper-content">
                 <form onSubmit="return false">
 
                     <div class="row g-3">
                         <div class="col-12 col-lg-3">
-                            <label for="InputCountry" class="form-label">Carrier *</label>
+                            <label for="InputCountry" class="form-label">Carrier <span style="color: red;">*</span></label>
                             <select class="form-select" id="InputCountry" aria-label="Default select example">
                                 <option selected>USPS</option>
                                 <option value="1">One</option>
@@ -60,7 +60,7 @@
                                 </select>
                         </div>
                         <div class="col-12 col-lg-3">
-                            <label for="InputCountry" class="form-label">Shipping Service*</label>
+                            <label for="InputCountry" class="form-label">Shipping Service<span style="color: red;">*</span></label>
                             <select class="form-select" id="InputCountry" aria-label="Default select example">
                                 <option selected>Express Way</option>
                                 <option value="1">One</option>
@@ -78,24 +78,24 @@
                                 </select>
                         </div>
                         <div class="col-12 col-lg-6">
-                            <label for="FisrtName" class="form-label">Weight (lbs)*</label>
-                            <input type="text" class="form-control" id="FisrtName" placeholder="First Name">
+                            <label for="FisrtName" class="form-label">Weight (lbs)<span style="color: red;">*</span></label>
+                            <input type="text" class="form-control" id="FisrtName" placeholder="Weight ">
                         </div>
                         <div class="col-12 col-lg-6">
                             <label for="LastName" class="form-label">Price Calculation ($)</label>
-                            <input type="text" class="form-control" id="LastName" placeholder="Last Name">
+                            <input type="text" class="form-control" id="LastName" placeholder="">
                         </div>
                         <div class="col-12 col-lg-3">
-                            <label for="PhoneNumber" class="form-label">Lenght *</label>
-                            <input type="text" class="form-control" id="PhoneNumber" placeholder="Phone Number">
+                            <label for="PhoneNumber" class="form-label">Lenght <span style="color: red;">*</span></label>
+                            <input type="text" class="form-control" id="PhoneNumber" placeholder=" Lenght">
                         </div>
                         <div class="col-12 col-lg-3">
-                            <label for="InputEmail" class="form-label">Wighth*</label>
-                            <input type="text" class="form-control" id="InputEmail" placeholder="Enter Email Address">
+                            <label for="InputEmail" class="form-label">Wighth<span style="color: red;">*</span></label>
+                            <input type="text" class="form-control" id="InputEmail" placeholder="Wighth">
                         </div>
                          <div class="col-12 col-lg-3">
-                            <label for="InputEmail" class="form-label">Height *</label>
-                            <input type="text" class="form-control" id="InputEmail" placeholder="Enter Email Address">
+                            <label for="InputEmail" class="form-label">Height <span style="color: red;">*</span></label>
+                            <input type="text" class="form-control" id="InputEmail" placeholder="Height">
                         </div>
 
                         <div class="col-12 col-lg-6 pt-2 headingFromTo">
@@ -148,11 +148,11 @@
                             <input type="text" class="form-control" id="LastName" placeholder="Phone">
                         </div>
                          <div class="col-12 col-lg-6">
-                            <label for="LastName" class="form-label">Street</label>
+                            <label for="LastName" class="form-label">Street<span style="color: red;">*</span></label>
                             <input type="text" class="form-control" id="Street" placeholder="Street">
                         </div>
                          <div class="col-12 col-lg-6">
-                            <label for="LastName" class="form-label">Street</label>
+                            <label for="LastName" class="form-label">Street<span style="color: red;">*</span></label>
                             <input type="text" class="form-control" id="LastName" placeholder="Street">
                         </div>
                          <div class="col-12 col-lg-6">
@@ -164,11 +164,11 @@
                             <input type="text" class="form-control" id="LastName" placeholder="Street2">
                         </div>
                          <div class="col-12 col-lg-6">
-                            <label for="LastName" class="form-label">ZIP Code *</label>
+                            <label for="LastName" class="form-label">ZIP Code <span style="color: red;">*</span></label>
                             <input type="text" class="form-control" id="LastName" placeholder="zip code">
                         </div>
                          <div class="col-12 col-lg-6">
-                            <label for="LastName" class="form-label">ZIP Code *</label>
+                            <label for="LastName" class="form-label">ZIP Code <span style="color: red;">*</span></label>
                             <input type="text" class="form-control" id="LastName" placeholder="zip code">
                         </div>
                         <div class="col-12 col-lg-6">
@@ -180,18 +180,18 @@
                             <input type="text" class="form-control" id="LastName" placeholder="city">
                         </div>
                        <div class="col-12 col-lg-6">
-                            <label for="InputCountry" class="form-label">State</label>
+                            <label for="InputCountry" class="form-label">State<span style="color: red;">*</span></label>
                             <select class="form-select" id="InputCountry" aria-label="Default select example">
-                                <option selected>Easypost</option>
+                                <option selected>UK</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
                                 </select>
                         </div>
                          <div class="col-12 col-lg-6">
-                            <label for="InputCountry" class="form-label">State</label>
+                            <label for="InputCountry" class="form-label">State<span style="color: red;">*</span></label>
                             <select class="form-select" id="InputCountry" aria-label="Default select example">
-                                <option selected>Easypost</option>
+                                <option selected>USA</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>

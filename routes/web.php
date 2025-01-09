@@ -15,7 +15,6 @@ use App\Http\Controllers\Backend\RechargePlansController;
 // Route::post('/usps/validate-address', [USPSController::class, 'validateAddress'])->name('usps.api');
 
 
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -25,10 +24,20 @@ Route::get('/', [UserController::class, 'Dashboard'])->name('web.dashboard');
 Route::get('/auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 ///
+Route::post('/user/logout', [UserController::class, 'Logout'])->name('user.logout');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+// Route::get('/admin/dashboard', function () {
+//     return view('admin.admin_dashboard'); // Add the appropriate view for admin
+// })->middleware(['auth', 'verified', 'role:admin'])->name('dashboard');
+
+// Route::get('/user/dashboard', function () {
+//     return view('user.user_dashboard'); // Add the appropriate view for user
+// })->middleware(['auth', 'verified', 'role:user'])->name('dashboard');
 
 
 Route::middleware('auth')->group(function () {
@@ -45,6 +54,8 @@ Route::middleware(['auth', 'roles:user'])->group(function(){
         Route::get('/user/dashboard', 'UserDashboard')->name('user.dashboard');
 
      });
+     //Route::post('/user/logout', [UserController::class, 'Logout'])->name('user.logout');
+
 
         //label
     Route::controller(LabelController::class)->group(function(){

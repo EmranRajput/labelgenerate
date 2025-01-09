@@ -151,10 +151,15 @@
         <div class="mt-4">
             <x-input-label for="password" :value="__('Password')" />
 
-            <x-text-input id="password" class="block mt-1 w-full"
+            <div class="relative">
+                <x-text-input id="password" class="block mt-1 w-full pr-10"
                             type="password"
                             name="password"
                             required autocomplete="current-password" />
+                <button type="button" onclick="togglePassword()" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-600 pt-2" id="show-pass">
+                    Show Password
+                </button>
+            </div>
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
@@ -199,7 +204,23 @@
 </x-guest-layout>
         @include('notification.notification_alert')
 
+<!-- ///password show -->
+<script>
+    function togglePassword() {
+        const passwordInput = document.getElementById('password');
+        const showPass   = document.getElementById('show-pass');
 
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            showPass.style.color = 'red'; // Change text color to blue
+        } else {
+            passwordInput.type = 'password';
+            showPass.style.color = 'black'; // Reset text color to black
+        }
+    }
+</script>
+
+<!-- //////// -->
 
 <!-- template js files -->
 <script src="{{asset('/frontend/js/jquery-3.4.1.min.js')}}"></script>
